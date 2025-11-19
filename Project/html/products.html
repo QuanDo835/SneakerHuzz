@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Sản Phẩm</title>
+  </head>
+  <style>
+    span.text-warning {
+      display: flex;
+      flex-direction: column;
+      /* align-self: end; */
+      font-size: 1.6rem;
+    }
+  </style>
+  <body class="bg-dark">
+    <!-- Navbar -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark p-0"
+      style="background-color: #2d4059"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end w-50"
+          style="background-color: #2d4059"
+          tabindex="-1"
+          id="offcanvasNavbar"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white">Sneaker Store</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body align-items-center">
+            <ul
+              class="navbar-nav flex-column flex-lg-row justify-content-end flex-grow-1 pe-3 gap-4"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="introduce.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="return-policy.html">Đổi trả</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sitemap.html">Sitemap</a>
+              </li>
+            </ul>
+            <div class="mt-3 ms-lg-4 mt-lg-0 d-flex gap-4 align-items-center">
+              <a href="login.html"><i class="fa-solid fa-user"></i></a>
+              <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a href="#"><i class="fa-solid fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <a href="#" class="messenger-icon">
+      <i class="fa-brands fa-facebook-messenger"></i>
+    </a>
+
+    <!-- Products Section -->
+    <section class="products-section py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold text-white">Sản Phẩm Của Chúng Tôi</h1>
+            <p class="lead text-light">
+              Giày sneaker chất lượng cao với giá tốt nhất
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 row-gap-4" id="contain">
+          <!-- Product 1 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-danger position-absolute top-0 end-0 m-2">
+                Giảm giá
+              </div>
+              <img
+                src="../img/adidas_giay superstar.jpg"
+                class="card-img-top"
+                alt="SuperStar"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">SuperStar</h5>
+                  <span class="text-warning fw-bold"
+                    ><del>3.500.000₫</del> 2.800.000₫</span
+                  >
+                </div>
+                <p class="card-text text-light">
+                  Giày Adidas Superstar trắng đen, thiết kế cổ điển, chất liệu
+                  da cao cấp.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 1,
+                      name: "SuperStar",
+                      price: 2800000,
+                      oldPrice: 3500000,
+                      image: "../img/adidas_giay superstar.jpg",
+                      desc: "Giày Adidas Superstar trắng đen, thiết kế cổ điển, chất liệu da cao cấp."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-danger position-absolute top-0 end-0 m-2">
+                Giảm giá
+              </div>
+              <img
+                src="../img/adidas_dep clog platform.jpg"
+                class="card-img-top"
+                alt="PlatForm"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">PlatForm</h5>
+                  <span class="text-warning fw-bold"
+                    ><del>3.200.000₫</del> 2.800.000₫</span
+                  >
+                </div>
+                <p class="card-text text-light">
+                  Dép platform Adidas Adilette, màu kem, cá tính, đế cao.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 2,
+                      name: "PlatForm",
+                      price: 2800000,
+                      oldPrice: 3200000,
+                      image: "../img/adidas_dep clog platform.jpg",
+                      desc: "Dép platform Adidas Adilette, màu kem, cá tính, đế cao."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-danger position-absolute top-0 end-0 m-2">
+                Giảm giá
+              </div>
+              <img
+                src="../img/adidas_giay forum bold.jpg"
+                class="card-img-top"
+                alt="Forum Bold"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Forum Bold</h5>
+                  <span class="text-warning fw-bold"
+                    ><del>2.500.000₫</del> 1.800.000₫</span
+                  >
+                </div>
+                <p class="card-text text-light">
+                  Giày Adidas Forum trắng, sọc vàng ánh kim, đế nâu, phong cách
+                  retro.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 3,
+                      name: "Forum Bold",
+                      price: 1800000,
+                      oldPrice: 2500000,
+                      image: "../img/adidas_giay forum bold.jpg",
+                      desc: "Giày Adidas Forum trắng, sọc vàng ánh kim, đế nâu, phong cách retro."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-info position-absolute top-0 end-0 m-2">
+                Hàng hiếm
+              </div>
+              <img
+                src="../img/32-2-1536x1536.jpg"
+                class="card-img-top"
+                alt="Adidas Ultraboost"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Adidas Ultraboost</h5>
+                  <span class="text-warning fw-bold">12.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày chạy bộ đột phá với công nghệ đệm Boost phản hồi nhanh.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 4,
+                      name: "Adidas Ultraboost",
+                      price: 12500000,
+                      image: "../img/32-2-1536x1536.jpg",
+                      desc: "Giày chạy bộ đột phá với công nghệ đệm Boost phản hồi nhanh."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 5 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div
+                class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+              >
+                Mới
+              </div>
+              <img
+                src="../img/adidas_dep di bien gazelle.jpg"
+                class="card-img-top"
+                alt="Dép gazelle"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Dép gazelle</h5>
+                  <span class="text-warning fw-bold">1.200.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Dép đi biển Adidas Gazelle trắng đen, hiện đại, chất liệu da.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 5,
+                      name: "Dép gazelle",
+                      price: 1200000,
+                      image: "../img/adidas_dep di bien gazelle.jpg",
+                      desc: "Dép đi biển Adidas Gazelle trắng đen, hiện đại, chất liệu da."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 6 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div
+                class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+              >
+                Mới
+              </div>
+              <img
+                src="../img/adidas_dep comfort.jpg"
+                class="card-img-top"
+                alt="Comfort"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Comfort</h5>
+                  <span class="text-warning fw-bold">1.000.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Dép Adidas đen, logo nổi, thiết kế tối giản, đế cao su bền bỉ.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 6,
+                      name: "Comfort",
+                      price: 1000000,
+                      image: "../img/adidas_dep comfort.jpg",
+                      desc: "Dép Adidas đen, logo nổi, thiết kế tối giản, đế cao su bền bỉ."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 7 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-success position-absolute top-0 end-0 m-2">
+                Bán chạy
+              </div>
+              <img
+                src="../img/adidas_dep adilette lumia.jpg"
+                class="card-img-top"
+                alt="Adilette Lumia"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Adilette Lumia</h5>
+                  <span class="text-warning fw-bold">2.200.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Dép Adidas hồng phấn, thiết kế trơn, đế dày, phong cách hiện
+                  đại.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 7,
+                      name: "Adilette Lumia",
+                      price: 2200000,
+                      image: "../img/adidas_dep adilette lumia.jpg",
+                      desc: "Dép Adidas hồng phấn, thiết kế trơn, đế dày, phong cách hiện đại."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 8 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <img
+                src="../img/adidas_dep quai ngang aqua.jpg"
+                class="card-img-top"
+                alt="Dép quai ngang Aqua"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">
+                    Dép quai ngang Aqua
+                  </h5>
+                  <span class="text-warning fw-bold">900.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Dép Adidas xám, thiết kế sọc ngang, đế cao su, phong cách đơn
+                  giản.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 8,
+                      name: "Dép quai ngang Aqua",
+                      price: 900000,
+                      image: "../img/adidas_dep quai ngang aqua.jpg",
+                      desc: "Dép Adidas xám, thiết kế sọc ngang, đế cao su, phong cách đơn giản."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 9 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div
+                class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+              >
+                Mới
+              </div>
+              <img
+                src="../img/bitis_giay tay boot Nam.jpg"
+                class="card-img-top"
+                alt="Giày Boot Nam"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Giày Boot Nam</h5>
+                  <span class="text-warning fw-bold">4.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày Bitis Boot đen, chất liệu da bóng, thiết kế cổ điển, đế
+                  thấp.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 9,
+                      name: "Giày Boot Nam",
+                      price: 4500000,
+                      image: "../img/bitis_giay tay boot Nam.jpg",
+                      desc: "Giày Bitis Boot đen, chất liệu da bóng, thiết kế cổ điển, đế thấp."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 10 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-success position-absolute top-0 end-0 m-2">
+                Bán chạy
+              </div>
+              <img
+                src="../img/bitis_giay tay.jpg"
+                class="card-img-top"
+                alt="Giày tây basic"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Giày tây basic</h5>
+                  <span class="text-warning fw-bold">1.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày tây Bitis nam nâu đậm, khóa kim loại, da bóng, phong cách
+                  lịch lãm.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 10,
+                      name: "Giày tây basic",
+                      price: 1500000,
+                      image: "../img/bitis_giay tay.jpg",
+                      desc: "Giày tây Bitis nam nâu đậm, khóa kim loại, da bóng, phong cách lịch lãm."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 11 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-success position-absolute top-0 end-0 m-2">
+                Bán chạy
+              </div>
+              <img
+                src="../img/bitis_giay the thao cao cap.jpg"
+                class="card-img-top"
+                alt="Giày thể thao"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Giày thể thao</h5>
+                  <span class="text-warning fw-bold">5.000.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày Bitis thể thao trắng xám, điểm nhấn đỏ, phong cách năng
+                  động, đế êm
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 11,
+                      name: "Giày thể thao",
+                      price: 5000000,
+                      image: "../img/bitis_giay the thao cao cap.jpg",
+                      desc: "Giày Bitis thể thao trắng xám, điểm nhấn đỏ, phong cách năng động, đế êm"
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 12 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <img
+                src="../img/bitis_giay the thao nu.jpg"
+                class="card-img-top"
+                alt="Giày thể thao"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Giày thể thao</h5>
+                  <span class="text-warning fw-bold">2.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày Bitis thể thao đen, vải lưới thoáng khí, đế trắng, phong
+                  cách hiện đại.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 12,
+                      name: "Giày thể thao",
+                      price: 2500000,
+                      image: "../img/bitis_giay the thao nu.jpg",
+                      desc: "Giày Bitis thể thao đen, vải lưới thoáng khí, đế trắng, phong cách hiện đại."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 13 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-info position-absolute top-0 end-0 m-2">
+                Hàng hiếm
+              </div>
+              <img
+                src="../img/nike_giay blazer mid.jpg"
+                class="card-img-top"
+                alt="Blazer Mid"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Blazer Mid</h5>
+                  <span class="text-warning fw-bold">10.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày cao cổ Nike trắng, logo đen, đế trắng, phong cách cổ điển
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 13,
+                      name: "Blazer Mid",
+                      price: 10500000,
+                      image: "../img/nike_giay blazer mid.jpg",
+                      desc: "Giày cao cổ Nike trắng, logo đen, đế trắng, phong cách cổ điển"
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 14 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-success position-absolute top-0 end-0 m-2">
+                Bán chạy
+              </div>
+              <img
+                src="../img/nike_giay air force.jpg"
+                class="card-img-top"
+                alt="Air Force"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Air Force</h5>
+                  <span class="text-warning fw-bold">6.300.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày Nike Air Force trắng, logo đen, đế trắng, thiết kế kinh
+                  điển.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 14,
+                      name: "Air Force",
+                      price: 6300000,
+                      image: "../img/nike_giay air force.jpg",
+                      desc: "Giày Nike Air Force trắng, logo đen, đế trắng, thiết kế kinh điển."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 15 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <img
+                src="../img/nike_court vision low.jpg"
+                class="card-img-top"
+                alt="Court Vison Low"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Court Vison Low</h5>
+                  <span class="text-warning fw-bold">4.800.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày Nike trắng, logo đen, đế nâu, phong cách cổ điển, chất
+                  liệu da.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 15,
+                      name: "Court Vison Low",
+                      price: 4800000,
+                      image: "../img/nike_court vision low.jpg",
+                      desc: "Giày Nike trắng, logo đen, đế nâu, phong cách cổ điển, chất liệu da."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 16 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <img
+                src="../img/nike_giay vista.jpg"
+                class="card-img-top"
+                alt="Vista"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Vista</h5>
+                  <span class="text-warning fw-bold">2.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Sandal Nike đen, logo trắng, quai đeo chắc chắn, đế cao su
+                  bền.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 16,
+                      name: "Vista",
+                      price: 2500000,
+                      image: "../img/nike_giay vista.jpg",
+                      desc: "Sandal Nike đen, logo trắng, quai đeo chắc chắn, đế cao su bền."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 17 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div
+                class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+              >
+                Mới
+              </div>
+              <img
+                src="../img/adidas_giay 4DFWD.jpg"
+                class="card-img-top"
+                alt="Giày ADFWD"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Giày ADFWD</h5>
+                  <span class="text-warning fw-bold">2.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày Adidas 4DFWD đen, công nghệ in 3D, thiết kế hiện đại,
+                  hiệu suất cao
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 17,
+                      name: "Giày ADFWD",
+                      price: 2500000,
+                      image: "../img/adidas_giay 4DFWD.jpg",
+                      desc: "Giày Adidas 4DFWD đen, công nghệ in 3D, thiết kế hiện đại, hiệu suất cao"
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 18 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <img
+                src="../img/nike_giay nike airforce 107.jpg"
+                class="card-img-top"
+                alt="Air Force 107"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Air Force 107</h5>
+                  <span class="text-warning fw-bold">4.800.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Nike Air Force trắng, biểu tượng thời trang, phong cách vượt
+                  thời gian
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 18,
+                      name: "Air Force 107",
+                      price: 4800000,
+                      image: "../img/nike_giay nike airforce 107.jpg",
+                      desc: "Nike Air Force trắng, biểu tượng thời trang, phong cách vượt thời gian"
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 19 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <img
+                src="../img/bitis_sandal.jpg"
+                class="card-img-top"
+                alt="Sandal cao cấp"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Sandal cao cấp</h5>
+                  <span class="text-warning fw-bold">1.300.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Sandal Biti's bé trai, quai chắc chắn, màu xanh năng động,
+                  thoải mái.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 19,
+                      name: "Sandal cao cấp",
+                      price: 1300000,
+                      image: "../img/bitis_sandal.jpg",
+                      desc: "Sandal Bitis bé trai, quai chắc chắn, màu xanh năng động, thoải mái."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 20 -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="product-card card h-100 border-0">
+              <div class="badge bg-success position-absolute top-0 end-0 m-2">
+                Bán chạy
+              </div>
+              <img
+                src="../img/footwear-5408643.jpg"
+                class="card-img-top"
+                alt="Vans Old Skool"
+              />
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="card-title text-white mb-0">Vans Old Skool</h5>
+                  <span class="text-warning fw-bold">1.500.000₫</span>
+                </div>
+                <p class="card-text text-light">
+                  Giày trượt ván cổ điển với chất liệu canvas bền và sọc biểu
+                  tượng.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <a
+                    href="chitiet.html"
+                    class="btn btn-sm btn-buy"
+                    onclick='viewDetail({
+                      id: 20,
+                      name: "Vans Old Skool",
+                      price: 1500000,
+                      image: "../img/footwear-5408643.jpg",
+                      desc: "Giày trượt ván cổ điển với chất liệu canvas bền và sọc biểu tượng."
+                    })'
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="voucher-section custom-margin py-5">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3">Nhận Ngay Voucher Giảm Giá!</h2>
+        <p class="mb-4">
+          Nhập email để nhận ưu đãi độc quyền từ cửa hàng của chúng tôi.
+        </p>
+        <form class="voucher-form mx-auto" style="max-width: 500px">
+          <input
+            type="email"
+            class="form-control me-2"
+            placeholder="Nhập email của bạn"
+            required
+          />
+          <button type="submit" class="btn-submit">Nhận Ngay</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section container custom-margin">
+      <h2 class="text-center my-5 text-white">Tin Tức Mới Nhất</h2>
+      <div class="news-grid">
+        <!-- Bài viết 1 -->
+        <div class="news-card">
+          <img src="../img/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg" alt="news" />
+          <div class="news-content">
+            <h5>5 Xu Hướng Giày Hot Nhất 2025</h5>
+            <p>
+              Cùng khám phá những mẫu giày đang làm mưa làm gió trong giới thời
+              trang năm nay.
+            </p>
+            <a href="#">Đọc thêm →</a>
+          </div>
+        </div>
+
+        <!-- Bài viết 2 -->
+        <div class="news-card">
+          <img
+            src="../img/pexels-shawn-ainsley-goes-50264052-9645566.jpg"
+            alt="news"
+          />
+          <div class="news-content">
+            <h5>Mẹo Bảo Quản Giày Đúng Cách</h5>
+            <p>Hướng dẫn giúp giày luôn sạch đẹp, thơm tho và bền lâu hơn.</p>
+            <a href="#">Đọc thêm →</a>
+          </div>
+        </div>
+
+        <!-- Bài viết 3 -->
+        <div class="news-card">
+          <img src="../img/rayul-_M6gy9oHgII-unsplash.jpg" alt="news" />
+          <div class="news-content">
+            <h5>Top Giày Chạy Thời Trang Đáng Mua 2025</h5>
+            <p>
+              Gợi ý những mẫu giày thời trang tốt, được yêu thích và đánh giá
+              cao nhất.
+            </p>
+            <a href="#">Đọc thêm →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Optional) -->
+    <footer class="footer bg-dark text-light pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1: Giới thiệu -->
+          <div class="col-md-3 mb-4">
+            <h5 class="text-uppercase fw-bold">ShoeStore</h5>
+            <p>
+              Chuyên cung cấp giày chính hãng, phong cách hiện đại, cập nhật xu
+              hướng thời trang.
+            </p>
+          </div>
+
+          <!-- Cột 2: Liên kết -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Liên kết</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="home.html" class="text-light text-decoration-none"
+                  >Trang chủ</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-light text-decoration-none"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a href="introduce.html" class="text-light text-decoration-none"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-light text-decoration-none"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Hỗ trợ -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Hỗ trợ</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="return-policy.html"
+                  class="text-light text-decoration-none"
+                  >Chính sách đổi trả</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Giao hàng</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Bảo mật</a>
+              </li>
+              <li>
+                <a href="faq.html" class="text-light text-decoration-none"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4: Mạng xã hội -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Kết nối</h4>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="fab fa-facebook-messenger"></i
+            ></a>
+            <div class="row mt-5">
+              <a class="navbar-brand" href="#">
+                <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bản quyền -->
+        <div class="text-center mt-4 border-top pt-3">
+          <small>&copy; 2025 ShoeStore. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function viewDetail(product) {
+        localStorage.setItem("product-detail", JSON.stringify(product));
+      }
+    </script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/products.js"></script>
+  </body>
+</html>

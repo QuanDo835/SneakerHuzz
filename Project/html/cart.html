@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Giỏ Hàng</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1e1e2f 0%, #2a2a3e 100%);
+        color: #fff;
+        padding-top: 80px; /* Chừa chỗ cho navbar fixed */
+      }
+      .cart-card {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px; /* Khoảng cách từ trên xuống */
+        margin-bottom: 50px; /* Khoảng cách dưới */
+        background: linear-gradient(-45deg, #0f0f0f, #1f1f2e, #232946);
+        background-size: 400% 400%;
+        animation: gradientMove 5s ease infinite;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .cart-card h2 {
+        font-size: 32px; /* Tăng cỡ chữ tiêu đề */
+      }
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .cart-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem 0;
+      }
+      .cart-item:last-child {
+        border-bottom: none;
+      }
+      .cart-item img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .cart-item-info {
+        flex: 1;
+        margin-left: 15px;
+      }
+      .cart-item-info h5 {
+        margin: 0 0 5px;
+        color: #fff;
+        font-size: 20px; /* Tăng cỡ chữ tên sản phẩm */
+      }
+      .cart-item-info div {
+        color: #ffc107;
+        font-weight: bold;
+        font-size: 18px; /* Tăng cỡ chữ giá */
+      }
+      .cart-item-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .quantity {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .quantity button {
+        width: 30px;
+        height: 30px;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px; /* Tăng cỡ chữ nút */
+      }
+      .quantity span {
+        min-width: 20px;
+        text-align: center;
+        font-size: 16px; /* Tăng cỡ chữ số lượng */
+      }
+      .btn-danger {
+        background-color: #ff6f61;
+        border: none;
+      }
+      .btn-danger:hover {
+        background-color: #e55a50;
+      }
+      .total {
+        text-align: right;
+        font-size: 24px; /* Tăng cỡ chữ tổng cộng */
+        font-weight: bold;
+        margin-top: 20px;
+        color: #ffc107;
+      }
+      .empty-message {
+        text-align: center;
+        padding: 40px;
+        color: #ccc;
+        font-size: 20px; /* Tăng cỡ chữ thông báo trống */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark p-0"
+      style="background-color: #2d4059"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end w-50"
+          style="background-color: #2d4059"
+          tabindex="-1"
+          id="offcanvasNavbar"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white">Sneaker Store</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body align-items-center">
+            <ul
+              class="navbar-nav flex-column flex-lg-row justify-content-end flex-grow-1 pe-3 gap-4"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="introduce.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="return-policy.html">Đổi trả</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sitemap.html">Sitemap</a>
+              </li>
+            </ul>
+            <div class="mt-3 ms-lg-4 mt-lg-0 d-flex gap-4 align-items-center">
+              <a href="login.html"><i class="fa-solid fa-user"></i></a>
+              <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a href="#"><i class="fa-solid fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="cart-card py-5">
+      <h2 class="text-center mb-4">Giỏ hàng của bạn</h2>
+      <div id="cart-items"></div>
+      <div class="total" id="cart-total"></div>
+      <div class="text-end mt-4">
+        <a href="#" class="btn btn-warning fw-bold">Thanh Toán</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="footer bg-dark text-light pt-5 pb-3 mt-5"
+      style="margin-top: 150px !important"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1: Giới thiệu -->
+          <div class="col-md-3 mb-4">
+            <h5 class="text-uppercase fw-bold">ShoeStore</h5>
+            <p>
+              Chuyên cung cấp giày chính hãng, phong cách hiện đại, cập nhật xu
+              hướng thời trang.
+            </p>
+          </div>
+
+          <!-- Cột 2: Liên kết -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Liên kết</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="home.html" class="text-light text-decoration-none"
+                  >Trang chủ</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-light text-decoration-none"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a href="introduce.html" class="text-light text-decoration-none"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-light text-decoration-none"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Hỗ trợ -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Hỗ trợ</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="return-policy.html"
+                  class="text-light text-decoration-none"
+                  >Chính sách đổi trả</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Giao hàng</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Bảo mật</a>
+              </li>
+              <li>
+                <a href="faq.html" class="text-light text-decoration-none"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4: Mạng xã hội -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Kết nối</h4>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="fab fa-facebook-messenger"></i
+            ></a>
+            <div class="row mt-5">
+              <a class="navbar-brand" href="#">
+                <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bản quyền -->
+        <div class="text-center mt-4 border-top pt-3">
+          <small>© 2025 ShoeStore. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function renderCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItemsDiv = document.getElementById("cart-items");
+        const totalDiv = document.getElementById("cart-total");
+
+        if (cart.length === 0) {
+          cartItemsDiv.innerHTML =
+            '<div class="empty-message">Giỏ hàng trống.</div>';
+          totalDiv.innerHTML = "";
+          return;
+        }
+
+        let total = 0;
+        cartItemsDiv.innerHTML = "";
+
+        cart.forEach((item, index) => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+
+          const cartItem = document.createElement("div");
+          cartItem.className = "cart-item";
+          cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div class="cart-item-info">
+              <h5>${item.name}</h5>
+              <div>${item.price.toLocaleString()}₫</div>
+            </div>
+            <div class="cart-item-controls">
+              <div class="quantity">
+                <button onclick="changeQuantity(${index}, -1)">-</button>
+                <span>${item.quantity}</span>
+                <button onclick="changeQuantity(${index}, 1)">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          `;
+          cartItemsDiv.appendChild(cartItem);
+        });
+
+        totalDiv.innerHTML = `Tổng cộng: ${total.toLocaleString()}₫`;
+      }
+
+      function changeQuantity(index, delta) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart[index].quantity += delta;
+        if (cart[index].quantity <= 0) cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      }
+
+      function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      }
+
+      renderCart();
+    </script>
+  </body>
+</html>

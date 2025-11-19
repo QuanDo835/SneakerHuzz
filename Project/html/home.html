@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- awesome font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- for Swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Welcome</title>
+  </head>
+
+  <body class="bg-dark">
+    <!-- Navbar -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark p-0"
+      style="background-color: #2d4059"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end w-50"
+          style="background-color: #2d4059"
+          tabindex="-1"
+          id="offcanvasNavbar"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white">Sneaker Store</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body align-items-center">
+            <ul
+              class="navbar-nav flex-column flex-lg-row justify-content-end flex-grow-1 pe-3 gap-4"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="introduce.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="return-policy.html">Đổi trả</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sitemap.html">Sitemap</a>
+              </li>
+            </ul>
+            <div class="mt-3 ms-lg-4 mt-lg-0 d-flex gap-4 align-items-center">
+              <a href="login.html"><i class="fa-solid fa-user"></i></a>
+              <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a href="#"><i class="fa-solid fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Swiper (Slider) -->
+    <div class="container-fluid mt-5 mt-lg-0 h-25">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../img/domino-studio-164_6wVEHfI-unsplash.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../img/pexels-madvortex-9251961.jpg" alt="" />
+          </div>
+          <div class="swiper-slide" id="pic3">
+            <img src="../img/footwear-5408643.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="container text-center text-white">
+      <h2 class="display-4 mb-4 fw-bold">Giày Mới Nhất - Chất Lượng Đảm Bảo</h2>
+      <p class="lead mb-4">
+        Khám phá bộ sưu tập giày thể thao và thời trang đỉnh cao của chúng tôi,
+        phù hợp với mọi phong cách.
+      </p>
+      <a href="#products" class="btn btn-lg">Khám Phá Ngay</a>
+    </section>
+
+    <!-- Video động -->
+    <div class="container text-center mt-5 custom-margin">
+      <video
+        width="55%"
+        autoplay
+        muted
+        loop
+        playsinline
+        style="border-radius: 20px; object-fit: cover"
+        loading="lazy"
+      >
+        <source
+          src="../vid/4380323-hd_1080_1920_30fps.webm"
+          type="video/webm"
+        />
+        Trình duyệt của bạn không hỗ trợ video.
+      </video>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="container custom-margin text-white">
+      <h2 class="text-center my-5">Sản Phẩm Nổi Bật</h2>
+      <div class="row d-flex g-5 mt-5">
+        <!-- Product 1 -->
+        <div class="col-lg-4 mt-5 mt-lg-0">
+          <div class="card border-0">
+            <img
+              src="../img/maksim-larin-NOpsC3nWTzY-unsplash.jpg"
+              class="card-img-top"
+              alt="Giày 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Giày Thể Thao</h5>
+              <p class="card-text">
+                Giày thể thao cao cấp, thiết kế thời trang, giúp bạn thoải mái
+                vận động.
+              </p>
+              <a href="#" class="btn">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-lg-4 mt-5 mt-lg-0">
+          <div class="card border-0">
+            <img
+              src="../img/32-2-1536x1536.jpg"
+              class="card-img-top"
+              alt="Giày 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Giày Casual</h5>
+              <p class="card-text">
+                Giày casual phong cách, thích hợp cho mọi dịp và dễ dàng phối
+                đồ.
+              </p>
+              <a href="#" class="btn">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-lg-4 mt-5 mt-lg-0">
+          <div class="card border-0">
+            <img
+              src="../img/jamaal-cooks-_UsZrKhbP-8-unsplash.jpg"
+              class="card-img-top"
+              alt="Giày 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Giày Formal</h5>
+              <p class="card-text">
+                Giày formal sang trọng, phù hợp cho các dịp công sở và tiệc
+                tùng.
+              </p>
+              <a href="#" class="btn">Mua Ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section
+      id="membership"
+      class="container text-center text-dark bg-light p-5 rounded-4 my-5 shadow membership-box"
+    >
+      <h2 class="fw-bold">Đăng ký Membership</h2>
+      <p class="lead">
+        Nhận ngay những ưu đãi và khuyến mãi đặc biệt dành riêng cho thành viên!
+      </p>
+      <a href="login.html" class="btn membership-btn">Tham gia ngay</a>
+    </section>
+    <!-- Feedback Section -->
+    <section class="container my-5 py-5">
+      <h2 class="text-center mb-5 fw-bold text-white">Khách Hàng Nói Gì?</h2>
+      <div class="swiper feedbackSwiper">
+        <div class="swiper-wrapper">
+          <!-- Feedback 1 -->
+          <div class="swiper-slide p-4 rounded-4 bg-light">
+            <p class="fst-italic">
+              <i class="fa-solid fa-quote-left text-dark me-2"></i>
+              Giày đẹp, chất lượng vượt mong đợi. Giao hàng rất nhanh!
+            </p>
+            <div class="mt-3 d-flex align-items-center gap-3">
+              <img
+                src="https://i.pravatar.cc/50?img=1"
+                class="rounded-circle"
+                alt="avatar"
+              />
+              <div>
+                <strong>Minh Anh</strong><br />
+                <small>TP. Hồ Chí Minh</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback 2 -->
+          <div class="swiper-slide p-4 rounded-4 bg-light">
+            <p class="fst-italic">
+              <i class="fa-solid fa-quote-left text-dark me-2"></i>
+              Dịch vụ tốt, giày đúng như mô tả. Rất hài lòng!
+            </p>
+            <div class="mt-3 d-flex align-items-center gap-3">
+              <img
+                src="https://i.pravatar.cc/50?img=2"
+                class="rounded-circle"
+                alt="avatar"
+              />
+              <div>
+                <strong>Hoàng Nam</strong><br />
+                <small>Hà Nội</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback 3 -->
+          <div class="swiper-slide p-4 rounded-4 bg-light">
+            <p class="fst-italic">
+              <i class="fa-solid fa-quote-left text-dark me-2"></i>
+              Sẽ tiếp tục ủng hộ. Shop phản hồi nhanh và hỗ trợ tốt.
+            </p>
+            <div class="mt-3 d-flex align-items-center gap-3">
+              <img
+                src="https://i.pravatar.cc/50?img=3"
+                class="rounded-circle"
+                alt="avatar"
+              />
+              <div>
+                <strong>Thu Huyền</strong><br />
+                <small>Đà Nẵng</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Optional) -->
+    <footer class="footer bg-dark text-light pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1: Giới thiệu -->
+          <div class="col-md-3 mb-4">
+            <h5 class="text-uppercase fw-bold">ShoeStore</h5>
+            <p>
+              Chuyên cung cấp giày chính hãng, phong cách hiện đại, cập nhật xu
+              hướng thời trang.
+            </p>
+          </div>
+
+          <!-- Cột 2: Liên kết -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Liên kết</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="home.html" class="text-light text-decoration-none"
+                  >Trang chủ</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-light text-decoration-none"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a href="introduce.html" class="text-light text-decoration-none"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-light text-decoration-none"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Hỗ trợ -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Hỗ trợ</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="return-policy.html"
+                  class="text-light text-decoration-none"
+                  >Chính sách đổi trả</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Giao hàng</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Bảo mật</a>
+              </li>
+              <li>
+                <a href="faq.html" class="text-light text-decoration-none"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4: Mạng xã hội -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Kết nối</h4>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="fab fa-facebook-messenger"></i
+            ></a>
+            <div class="row mt-5">
+              <a class="navbar-brand" href="#">
+                <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bản quyền -->
+        <div class="text-center mt-4 border-top pt-3">
+          <small>&copy; 2025 ShoeStore. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/mylandpage.js"></script>
+  </body>
+</html>

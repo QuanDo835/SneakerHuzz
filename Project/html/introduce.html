@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Our Team</title>
+  </head>
+
+  <body class="bg-dark">
+    <!-- Navbar -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark p-0"
+      style="background-color: #2d4059"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end w-50"
+          style="background-color: #2d4059"
+          tabindex="-1"
+          id="offcanvasNavbar"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white">Sneaker Store</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body align-items-center">
+            <ul
+              class="navbar-nav flex-column flex-lg-row justify-content-end flex-grow-1 pe-3 gap-4"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="introduce.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="return-policy.html">Đổi trả</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sitemap.html">Sitemap</a>
+              </li>
+            </ul>
+            <div class="mt-3 ms-lg-4 mt-lg-0 d-flex gap-4 align-items-center">
+              <a href="login.html"><i class="fa-solid fa-user"></i></a>
+              <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a href="#"><i class="fa-solid fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center mb-5 introduce">
+            <h1 class="display-4 fw-bold text-white">
+              <i class="fas fa-code text-warning me-2"></i>
+              Thành Viên Phát Triển
+            </h1>
+
+            <p class="lead text-light mb-2">
+              <span id="typing-text"></span><span class="cursor">|</span>
+            </p>
+
+            <p class="text-light fst-italic">
+              Chúng tôi là nhóm lập trình viên trẻ với đam mê công nghệ và sự
+              sáng tạo, luôn hướng tới trải nghiệm người dùng tối ưu nhất.
+            </p>
+
+            <p class="text-light small">
+              <i class="fas fa-lightbulb me-1 text-warning"></i>
+              "Giao diện đẹp là khởi đầu của một trải nghiệm tuyệt vời."
+            </p>
+          </div>
+
+          <!-- Member 1 -->
+          <div class="col-md-5 col-lg-5 mb-4 mb-lg-0">
+            <div class="team-card card h-100 border-0">
+              <div class="card-img-top position-relative">
+                <img
+                  src="../img/nha.jpg"
+                  alt="Team Member 1"
+                  class="img-fluid rounded-circle"
+                  width="200px"
+                  height="200px"
+                />
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="card-title text-white">Trần Quốc Nhã</h3>
+                <h5 class="text-warning">DHKTPM19A</h5>
+                <p class="card-text text-light">
+                  Chuyên tạo ra giao diện người dùng đẹp mắt, nhạy bén bằng
+                  HTML, CSS và JavaScript.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="col-md-5 col-lg-5">
+            <div class="team-card card h-100 border-0">
+              <div class="card-img-top position-relative">
+                <img
+                  src="../img/quan.jpg"
+                  alt="Team Member 2"
+                  class="img-fluid rounded-circle"
+                  width="200px"
+                  height="200px"
+                />
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="card-title text-white">Đỗ Minh Quân</h3>
+                <h5 class="text-warning">DHKTPM19A</h5>
+                <p class="card-text text-light">
+                  Chuyên tạo ra giao diện người dùng đẹp mắt, nhạy bén bằng
+                  HTML, CSS và JavaScript.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section py-5 bg-secondary bg-opacity-10">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-white">Các Kỹ Năng</h2>
+          </div>
+          <div class="col-md-10">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="skill-item p-4 rounded">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-white">HTML/CSS</span>
+                    <span class="text-warning">90%</span>
+                  </div>
+                  <div class="progress" style="height: 10px">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 90%"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="skill-item p-4 rounded">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-white">JavaScript</span>
+                    <span class="text-warning">75%</span>
+                  </div>
+                  <div class="progress" style="height: 10px">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 75%"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="skill-item p-4 rounded">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-white">Bootstrap</span>
+                    <span class="text-warning">90%</span>
+                  </div>
+                  <div class="progress" style="height: 10px">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 90%"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="skill-item p-4 rounded">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-white">SQL Server</span>
+                    <span class="text-warning">75%</span>
+                  </div>
+                  <div class="progress" style="height: 10px">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 75%"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Optional) -->
+    <footer class="footer bg-dark text-light pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1: Giới thiệu -->
+          <div class="col-md-3 mb-4">
+            <h5 class="text-uppercase fw-bold">ShoeStore</h5>
+            <p>
+              Chuyên cung cấp giày chính hãng, phong cách hiện đại, cập nhật xu
+              hướng thời trang.
+            </p>
+          </div>
+
+          <!-- Cột 2: Liên kết -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Liên kết</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="home.html" class="text-light text-decoration-none"
+                  >Trang chủ</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-light text-decoration-none"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a href="introduce.html" class="text-light text-decoration-none"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-light text-decoration-none"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Hỗ trợ -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Hỗ trợ</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="return-policy.html"
+                  class="text-light text-decoration-none"
+                  >Chính sách đổi trả</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Giao hàng</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Bảo mật</a>
+              </li>
+              <li>
+                <a href="faq.html" class="text-light text-decoration-none"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4: Mạng xã hội -->
+          <div class="col-md-3 mb-4">
+            <h4 class="text-uppercase fw-bold">Kết nối</h4>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="fab fa-facebook-messenger"></i
+            ></a>
+            <div class="row mt-5">
+              <a class="navbar-brand" href="#">
+                <img src="../img/sneaker-shoe-svgrepo-com.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bản quyền -->
+        <div class="text-center mt-4 border-top pt-3">
+          <small>&copy; 2025 ShoeStore. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Bundle JS -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/team.js"></script>
+  </body>
+</html>
